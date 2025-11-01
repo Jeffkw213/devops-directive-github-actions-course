@@ -1,10 +1,10 @@
-name: Hello World
+name: Hello World # The name of the workflow
 
 on:
-    workflow_dispatch:
+    workflow_dispatch: # Allows manual triggering of the workflow
 
-jobs:
-    say-hello-inline-bash:
-        runs-on: ubuntu-24.04
-        steps:
+jobs: # The jobs that will be run
+    say-hello-inline-bash: # The ID of the job
+        runs-on: ubuntu-24.04 # The operating system on which to run the job
+        steps: # The steps that will be run in the job
             - run: echo "Hello from an inline bash script in a GitHub Action Workflow!"
